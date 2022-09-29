@@ -5,4 +5,3 @@ Console.WriteLine("Welcome to Mood Analyze....!");
 Console.WriteLine("How is your Mood Happy or Sad...?");
 string message = Console.ReadLine();
 MoodAnalyzer moodAnalyzer = new MoodAnalyzer();
-Console.WriteLine(moodAnalyzer.AnalyseMood(message));
