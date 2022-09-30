@@ -5,7 +5,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{591B86B6-5B04-4CC4-94AD-5A5182BD0944}</ProjectGuid>
+    <ProjectGuid>{631FDB8E-C412-4481-836C-82122B79E58A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MoodAnalyzerTest</RootNamespace>
@@ -57,7 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MoodAnalyzerProblem\MoodAnalyzerProblem.csproj">
-      <Project>{8bc25692-afa7-4e71-98e0-b07b4cc108c6}</Project>
+      <Project>{694cc2f2-08d4-4964-bb6e-6c8f137782ca}</Project>
       <Name>MoodAnalyzerProblem</Name>
     </ProjectReference>
   </ItemGroup>

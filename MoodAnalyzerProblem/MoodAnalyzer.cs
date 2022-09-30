@@ -6,30 +6,38 @@ using System.Threading.Tasks;
 
 namespace MoodAnalyzerProblem
 {
-    public class MoodAnalyzer
+    internal class MoodAnalyzer
     {
-        public string message;
+        string message;
+        /// <summary>
+        /// Initializes a new instance of the <see cref="MoodAnalyser"/> class.
+        /// </summary>
         public MoodAnalyzer()
         {
+
         }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="MoodAnalyser"/> class.
+        /// </summary>
+        /// <param name="message">The message.</param>
         public MoodAnalyzer(string message)
         {
             this.message = message;
         }
-        public string AnalyseMood()
+        /// <summary>
+        /// Analyses user's mood.
+        /// </summary>
+        /// <param name="message">The message</param>
+        /// <returns>Sad else Happy</returns>
+        public string AnalyseMood(string message)
         {
-            try
+            ///Checks if user mood is sad will return sad,
+            ///if user mood is happy will return happy.
+            if (message.ToUpper().Contains("SAD"))
             {
-                if (this.message.Contains("Sad"))
-                {
-                    return "SAD";
-                }
-                else
-                {
-                    return "HAPPY";
-                }
+                return "SAD";
             }
-            catch (NullReferenceException ex)
+            else
             {
                 return "HAPPY";
             }
