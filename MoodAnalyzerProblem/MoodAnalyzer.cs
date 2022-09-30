@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MoodAnalyzerProblem
 {
-    internal class MoodAnalyzer
+    public class MoodAnalyzer
     {
         string message;
         /// <summary>
@@ -16,7 +16,7 @@ namespace MoodAnalyzerProblem
         {
 
         }
-        /// <summary>
+        /// <summary> UC 1
         /// Initializes a new instance of the <see cref="MoodAnalyser"/> class.
         /// </summary>
         /// <param name="message">The message.</param>
@@ -40,6 +40,44 @@ namespace MoodAnalyzerProblem
             else
             {
                 return "HAPPY";
+            }
+        }
+        //UC 2
+        public string AnalyseMood()
+        {
+            try
+            {
+                if (message.Contains("SAD"))
+                    return "SAD";
+                else
+                    return "HAPPY";
+            }
+            catch (NullReferenceException ex)
+            {
+                return "HAPPY";
+            }
+        }
+        //UC 3
+        public string MoodAnalyse()
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(message))
+                {
+                    throw new MoodAnalysisException(MoodAnalysisException.ExceptionType.EMPTY_MOOD, "Message is Empty");
+                }
+                if (message.Contains("Sad"))
+                {
+                    return "SAD";
+                }
+                else
+                {
+                    return "HAPPY";
+                }
+            }
+            catch (MoodAnalysisException)
+            {
+                throw new MoodAnalysisException(MoodAnalysisException.ExceptionType.NULL_MOOD, "Message is ull");
             }
         }
     }
